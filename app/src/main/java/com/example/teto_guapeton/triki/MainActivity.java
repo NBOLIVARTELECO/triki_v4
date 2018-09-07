@@ -159,6 +159,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         judador1puntos=0;
         judador2puntos=0;
         actualizar_puntos();
-        reiniciar_tablero()
+        reiniciar_tablero();
     }
 }
