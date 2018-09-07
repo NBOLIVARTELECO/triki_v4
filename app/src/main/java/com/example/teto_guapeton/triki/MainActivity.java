@@ -154,13 +154,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         outState.putBoolean("jugador1_turno", jugador1_Turno);
     }
 
-    private void reiniciar_juego(){
+    private void reiniciar_ju{
 
 
 
 
 
-        
+
         judador1puntos=0;
         judador2puntos=0;
         actualizar_puntos();
