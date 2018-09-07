@@ -155,6 +155,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void reiniciar_juego(){
+
+
+
+
+
+        
         judador1puntos=0;
         judador2puntos=0;
         actualizar_puntos();
