@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         boton_Reset.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               reiniciar_tablero();
+               reiniciar_juego();
             }
         });
     }
@@ -135,4 +135,29 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     }
 
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        rondas=savedInstanceState.getInt("rondas");
+        judador1puntos=savedInstanceState.getInt("jugador1puntos");
+        judador2puntos=savedInstanceState.getInt("judador2puntos");
+        jugador1_Turno=savedInstanceState.getBoolean("jugador1_Turno");
+
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putInt("rondas", rondas);
+        outState.putInt("jugador1puntos", judador1puntos);
+        outState.putInt("jugador2puntos", judador2puntos);
+        outState.putBoolean("jugador1_turno", jugador1_Turno);
+    }
+
+    private void reiniciar_juego(){
+        judador1puntos=0;
+        judador2puntos=0;
+        actualizar_puntos();
+        reiniciar_tablero();
+    }
 }
